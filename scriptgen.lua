@@ -37,7 +37,7 @@ local UICorner_2 = Instance.new("UICorner")
 --Properties:
 
 ScriptGen.Name = "ScriptGen"
-ScriptGen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScriptGen.Parent = game.CoreGui
 ScriptGen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScriptGen
@@ -356,7 +356,7 @@ local function LWKZEG_fake_script() -- copypos.LocalScript
 	local script = Instance.new('LocalScript', copypos)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		setclipboard(game.Players.Localplayer.Character.HumanoidRootPart.Position)
+		setclipboard(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
 	end)
 end
 coroutine.wrap(LWKZEG_fake_script)()
