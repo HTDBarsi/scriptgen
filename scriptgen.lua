@@ -1,5 +1,4 @@
---made by htdbarsi lol
-
+-- made by htdbarsi lol
 -- Gui to Lua
 -- Version: 3.2
 
@@ -38,7 +37,7 @@ local UICorner_2 = Instance.new("UICorner")
 --Properties:
 
 ScriptGen.Name = "ScriptGen"
-ScriptGen.Parent = game.CoreGui
+ScriptGen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScriptGen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScriptGen
@@ -285,7 +284,7 @@ UICorner_2.Parent = copypos
 
 -- Scripts:
 
-local function THWGVJV_fake_script() -- selection.handler 
+local function SLWNA_fake_script() -- selection.handler 
 	local script = Instance.new('LocalScript', selection)
 
 	getgenv().code = {}
@@ -352,12 +351,12 @@ local function THWGVJV_fake_script() -- selection.handler
 		end
 	end)
 end
-coroutine.wrap(THWGVJV_fake_script)()
-local function IOVFP_fake_script() -- copypos.LocalScript 
+coroutine.wrap(SLWNA_fake_script)()
+local function LWKZEG_fake_script() -- copypos.LocalScript 
 	local script = Instance.new('LocalScript', copypos)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(game.Players.Localplayer.Character.HumanoidRootPart.Position)
 	end)
 end
-coroutine.wrap(IOVFP_fake_script)()
+coroutine.wrap(LWKZEG_fake_script)()
