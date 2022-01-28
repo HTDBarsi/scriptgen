@@ -31,8 +31,6 @@ local code_2 = Instance.new("ScrollingFrame")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local exporting = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
-local copypos = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
@@ -267,24 +265,9 @@ exporting.TextWrapped = true
 
 UICorner.Parent = exporting
 
-copypos.Name = "copy pos"
-copypos.Parent = Frame
-copypos.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-copypos.BackgroundTransparency = 0.500
-copypos.Position = UDim2.new(0, 0, 0.899999976, 0)
-copypos.Size = UDim2.new(0.200000003, 0, 0.100000001, 0)
-copypos.Font = Enum.Font.SourceSans
-copypos.Text = "copy your position"
-copypos.TextColor3 = Color3.fromRGB(255, 255, 255)
-copypos.TextScaled = true
-copypos.TextSize = 25.000
-copypos.TextWrapped = true
-
-UICorner_2.Parent = copypos
-
 -- Scripts:
 
-local function SLWNA_fake_script() -- selection.handler 
+local function MFRY_fake_script() -- selection.handler 
 	local script = Instance.new('LocalScript', selection)
 
 	getgenv().code = {}
@@ -351,12 +334,4 @@ local function SLWNA_fake_script() -- selection.handler
 		end
 	end)
 end
-coroutine.wrap(SLWNA_fake_script)()
-local function LWKZEG_fake_script() -- copypos.LocalScript 
-	local script = Instance.new('LocalScript', copypos)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
-	end)
-end
-coroutine.wrap(LWKZEG_fake_script)()
+coroutine.wrap(MFRY_fake_script)()
