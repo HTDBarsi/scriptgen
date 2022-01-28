@@ -356,7 +356,7 @@ local function LWKZEG_fake_script() -- copypos.LocalScript
 	local script = Instance.new('LocalScript', copypos)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		setclipboard(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+		setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
 	end)
 end
 coroutine.wrap(LWKZEG_fake_script)()
